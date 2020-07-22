@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    </head>
+<body>
+    <nav class="nav navbar-default">
+        <ul class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/h">Exam</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/p">User List</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <a class="navbar-brand" href="/signup">Sign up</a>
+                <a class="navbar-brand" href="/accounts/login">Login</a>
+                <a class="navbar-brand" href="/accounts/logout">Logout</a>
+            </ul>
+        </ul>
+    </nav>
+    {%block body_block%}
+    {% endblock %}
+</body>
+</html>
