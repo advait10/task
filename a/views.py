@@ -1,8 +1,8 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from a.form import SignUpform
+from a.form import SignUpform, Student
 from django.http import HttpResponseRedirect
-
+from django.contrib.auth.models import Permission
 
 def home_page(request):
     return render(request, 'home.html')
@@ -10,7 +10,8 @@ def home_page(request):
 
 @login_required
 def user_view(request):
-    return render(request, 'user.html')
+    form = SignUpform()
+    return render(request, 'user.html', {'form': form})
 
 
 def logout_view(request):
@@ -27,6 +28,5 @@ def signup_view(request):
             user.save()
         return HttpResponseRedirect('/accounts/login')
     return render(request, 'registration/signup.html', context={'form': form})
-
 
 
