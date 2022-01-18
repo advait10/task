@@ -10,8 +10,7 @@ def home_page(request):
 
 @login_required
 def user_view(request):
-    form = SignUpform()
-    return render(request, 'user.html', {'form': form})
+    return render(request, 'user.html')
 
 
 def logout_view(request):
